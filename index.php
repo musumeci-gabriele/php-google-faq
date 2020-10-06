@@ -37,9 +37,33 @@
   <head>
     <meta charset="utf-8">
     <title>Google Faq</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
+    <!-- top bar -->
+    <div class="topbar">
+
+      <!-- logo e termini  -->
+      <div class="logo-terms">
+        <img src="googlelogo.png" alt="google-logo" width="80px">
+        <p id="terms">Privacy e termini</p>
+      </div>
+      <!--// logo e termini  -->
+      <nav class="navbar">
+        <ul class="services">
+          <li><a href="#">Introduzione</a></li>
+          <li><a href="#">Norme sulla privacy</a></li>
+          <li><a href="#">Termini di servizio</a></li>
+          <li><a href="#">Tecnologie</a></li>
+          <li><a href="#">Domande frequenti</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- top bar -->
+
+    <!-- Paragrafi domande e risposte -->
     <div class="container">
 
           <!-- lista di stampa -->
@@ -48,11 +72,11 @@
               <?php foreach ($faq as $key => $text): ?>
 
                 <li>
-                  <h2><?php echo $text["question"] ?></h2>
+                  <h2><?php echo $text["question"] ?></h2><br>
 
                   <?php foreach ($text["answer"] as $answer): ?>
 
-                    <p><?php echo $answer ?></p>
+                    <p><?php echo $answer ?></p><br>
 
                   <?php endforeach; ?>
 
@@ -66,6 +90,7 @@
           <!--// lista di stampa -->
 
     </div>
+    <!--// Paragrafi domande e risposte -->
 
   </body>
 </html>
